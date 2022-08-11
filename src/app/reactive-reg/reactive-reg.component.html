@@ -1,24 +1,37 @@
-<div>
-  <span><b>Search:</b></span>
+<!-- <div *ngFor="let product of products">
+  <br>
+  <br>
+  <br>
+  <button class="btn btn-success" *ngIf="product.color === 'black' else showred">Show Black</button>
+  <ng-template #showred>
+    <button class="btn btn-danger">Show Red</button>
+  </ng-template>
+</div> -->
+<!-- <div [ngStyle]="{background: searchValue != '' ? 'orange' : ''}"> -->
+<!-- <div [ngClass]="{changeBackground: searchValue != ''}">
+  <span><b>Search:</b></span> -->
   <!-- <input type="text" (input)="changeSearchValue($event)"> -->
-  <input type="text" [(ngModel)]="searchValue">
-    <span *ngIf="searchValue !== ''">You searched for "{{ searchValue }}"</span>
-</div>
-<br><br>
+  <!-- <input type="text" [(ngModel)]="searchValue"> -->
+  <!-- <div> -->
+    <!-- <span *ngIf="searchValue !== ''">You searched for "{{ searchValue }}"</span> -->
+  <!-- </div> -->
+<!-- </div> -->
+<!-- <br><br>
 
 <div *ngFor="let p of products let i = index">
   <div>
-    <div><img [src]="p.image" alt="" srcset=""></div>
+    <div><img [src]="p.image" alt="" srcset=""></div> -->
     <!-- <p>{{ i }}</p> -->
-    <h4>Name: {{ p.name }}</h4>
+    <!-- <h4>Name: {{ p.name }}</h4>
     <h4>School: {{ p.school }}</h4>
     <h4 *ngIf="p.age === 24 ">Age: {{ p.age }}</h4>
     <div [ngStyle]="{backgroundColor: p.color === 'black' ? 'green' : 'indigo' }">
       <h4>Color: {{ p.color }}</h4>
     </div>
   </div>
-</div>
+</div> -->
 
+<br><br>
 <div class="form">
   <h2 id="registration">Reactive Form</h2>
   <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">

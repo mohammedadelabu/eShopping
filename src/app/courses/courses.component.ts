@@ -1,26 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-newproducts',
-  templateUrl: './newproducts.component.html',
-  styleUrls: ['./newproducts.component.css']
+  selector: 'app-courses',
+  templateUrl: './courses.component.html',
+  styleUrls: ['./courses.component.css']
 })
-export class NewproductsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  // products = [
-  //   {name:"Ade", school:"OAU", address:"Osun", schoolFees: "52000", image: "/assets/shopping.jpg"},
-  //   {name:"Bayo", school:"ABU", address:"Zaria", schoolFees: "50000", image: "/assets/tv.jpg"},
-  //   {name:"Chidi", school:"OSU", address:"Ogun", schoolFees: "42000", image: "/assets/shopping.jpg"},
-  //   {name:"Dapo", school:"KWASU", address:"Oyo", schoolFees: "42000", image: "/assets/shopping.jpg"},
-  //   {name:"Esther", school:"DELSU", address:"Lagos", schoolFees: "32000", image: "/assets/shopping.jpg"},
-  //   {name:"Funmi", school:"ABSU", address:"Kwara", schoolFees: "12000", image: "/assets/shopping.jpg"},
-  // ]
-
+export class CoursesComponent{
   courses = [
     { id:101, name:'JavaScript for beginners ', author: 'John Heikela', duration: 48, type: 'Free',
       price: 0.00, ratings: 3.5, image:'assets/courses/course-image-1.jpeg',
@@ -60,4 +45,22 @@ export class NewproductsComponent implements OnInit {
     }
   ]
 
+  getTotalCourses(){
+    return this.courses.length
+  }
+
+  getTotalFreeCourses(){
+    return this.courses.filter(course => course.type === 'Free').length;
+  }
+
+  getTotalPremiumCourses(){
+    return this.courses.filter(course => course.type === 'Premium').length;
+  }
+  courseCountRadioButton: string = 'All';
+
+  onFilterRadioButtonChanged(data: string){
+    this.courseCountRadioButton = data;
+    console.log(this.courseCountRadioButton);
+
+  }
 }

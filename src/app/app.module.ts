@@ -12,6 +12,11 @@ import { ProductsComponent } from './products/products.component';
 import { NewproductsComponent } from './newproducts/newproducts.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveRegComponent } from './reactive-reg/reactive-reg.component';
+import { CoursesComponent } from './courses/courses.component';
+import { HeaderNewComponent } from './header-new/header-new.component';
+import { SearchNewComponent } from './search-new/search-new.component';
+import { FilterComponent } from './filter/filter.component';
+import { NewFilterComponent } from './new-filter/new-filter.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,11 @@ import { ReactiveRegComponent } from './reactive-reg/reactive-reg.component';
     NewproductsComponent,
     RegisterComponent,
     ReactiveRegComponent,
+    CoursesComponent,
+    HeaderNewComponent,
+    SearchNewComponent,
+    FilterComponent,
+    NewFilterComponent,
   ],
   imports: [
     BrowserModule,
