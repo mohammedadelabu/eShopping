@@ -60,4 +60,28 @@ export class NewproductsComponent implements OnInit {
     }
   ]
 
+  getTotalCourses(){
+    return this.courses.length;
+  }
+
+  getTotalFreeCourses(){
+    return this.courses.filter(course => course.type === 'Free').length;
+  }
+
+  getTotalPremiumCourses(){
+    return this.courses.filter(course => course.type === 'Premium').length;
+  }
+  courseCountRadioButton: string = 'All'
+  displaySearchValue: string = '';
+
+  onFilterRadioButtonChanged(data: string){
+    this.courseCountRadioButton = data;
+    // console.log(this.courseCountRadioButton);
+  }
+
+
+  onDisplaySearchValue(data: string){
+    this.displaySearchValue = data;
+    // console.log(this.displaySearchValue);
+  }
 }
