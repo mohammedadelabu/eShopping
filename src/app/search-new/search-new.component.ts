@@ -22,8 +22,11 @@ export class SearchNewComponent implements OnInit {
 
   onShowSearchValue(){
     this.showSearchValue.emit(this.searchValue);
-    // console.log(this.searchValue);
+    console.log(this.searchValue);
+  }
 
+  sayHello(inputEl: HTMLInputElement){
+    alert('Hello ' +inputEl.value);
   }
 
 }
