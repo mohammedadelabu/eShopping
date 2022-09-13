@@ -17,6 +17,7 @@ import { HeaderNewComponent } from './header-new/header-new.component';
 import { SearchNewComponent } from './search-new/search-new.component';
 import { FilterComponent } from './filter/filter.component';
 import { NewFilterComponent } from './new-filter/new-filter.component';
+import { CustomerListComponent } from './customer-list/customer-list.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { NewFilterComponent } from './new-filter/new-filter.component';
     SearchNewComponent,
     FilterComponent,
     NewFilterComponent,
+    CustomerListComponent,
   ],
   imports: [
     BrowserModule,
